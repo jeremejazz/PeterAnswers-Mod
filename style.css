@@ -208,7 +208,9 @@ p { font-size: .875em }
     padding: .75em 0 0 1.25em;
 }
 .input,
-.btn { font-family: Georgia,"Times New Roman",Times,serif }
+.btn { font-family: Georgia,"Times New Roman",Times,serif;
+
+ }
 .lbl,
 .answer { font-family: Milonga,Georgia,"Times New Roman",Times,serif }
 .lbl {
@@ -266,6 +268,7 @@ p { font-size: .875em }
 .btnSmall {
     height: 3em;
     margin: -0.6em 1.8em 0 0;
+     cursor: pointer;
 }
 .btnLicense {
     width: 6em;

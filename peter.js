@@ -7,119 +7,35 @@ function ReverseDiv(d) {
 };
 
 function submitThis() {
-   // if (accepted) {
+
         if (document.getElementById("txtpetition").value.length < 3) {
             document.getElementById("output").innerHTML = error_pet;
             document.getElementById("txtpetition").focus()
         } else {
             if (document.getElementById("txtquestion").value.length < 3) {
-                document.getElementById("output").innerHTML = O0O0OO0;
+                document.getElementById("output").innerHTML = error_q;
                 document.getElementById("txtquestion").focus()
             } else {
                 document.getElementById("txtpetition").readOnly = true;
                 document.getElementById("txtquestion").readOnly = true;
                 document.getElementById("btnAsk").style.visibility = "hidden";
                 document.getElementById("btnNew").style.visibility = "visible";
-                document.getElementById("output").innerHTML = O000O00;
+                document.getElementById("output").innerHTML = loadingbar;
                 setTimeout(function(){
                     document.getElementById("output").innerHTML = O0O0O00;
-                },1000);
+                },1000 * Math.random());
                 
                 /*
-                O0O00OO();
-                O0O0OOO.onreadystatechange = OO000OO;
-                O0O0OOO.open("POST", "/submitThis.aspx", true);
-                O0O0OOO.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                O0O0OOO.send("O000000=" + O000000 + "&txtpetition=" + document.getElementById("txtpetition").value + "&txtquestion=" + document.getElementById("txtquestion").value + "&O0O0O00=" + O0O0O00)
-                */
+                //no more ajax!
+                 */
             }
         }
-    /*} else {
-       // O0OOOOO()
 
-    } */
 }
 
-function OO000OO() {
-    if (O0O0OOO.readyState == 4) {
-        if (O0O0OOO.status == 200) {
-            if (O0O0OOO.responseText != null) {
-                OO0000O = setTimeout("O00000O()", Math.floor(Math.random() * 3000))
-            } else {
-                document.getElementById("output").innerHTML = O000O0O
-            }
-        } else {
-            document.getElementById("output").innerHTML = O000O0O + " - Error: " + O0O0OOO.status + " / " + O0O0OOO.statusText
-        }
-    }
-}
 
-function O00000O() {
-    clearTimeout(OO0000O);
-    document.getElementById("output").innerHTML = O0O0OOO.responseText;
-    OO0000O = setTimeout("O00O00O()", 1000)
-}
 
-function O0OOOOO() { //post to ajax that echoes string
-  //  O0O00OO();
-    // O0O0OOO.onreadystatechange = OO00000;
-    // O0O0OOO.open("POST", "/O0OOOOO.aspx", true);
-    // O0O0OOO.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    // O0O0OOO.send("O000000=" + O000000);
-    document.getElementById("divLicense").innerHTML = O000OO0;
-    OO00O00(true)
-}
 
-function OO00000() {
-       OO00O00(true);
-   //  document.getElementById("divLicense").innerHTML = O0O0OOO.responseText;
-                document.getElementById("btnAcceptLic").focus()
-
-    //if (O0O0OOO.readyState == 4) {
-   //     if (O0O0OOO.status == 200) {
-        /*    if (O0O0OOO.responseText != null) {
-                OO00O00(true);
-                document.getElementById("divLicense").innerHTML = O0O0OOO.responseText;
-                document.getElementById("btnAcceptLic").focus()
-            } else {
-                */
-               // OO00O00(false);
-                //document.getElementById("O0OO000").innerHTML = O000O0O
-          //  }
-        //} else {
-         //  OO00O00(false);
-       // document.getElementById("O0OO000").innerHTML = O000O0O + " - Error: " + O0O0OOO.status + " / " + O0O0OOO.statusText
-       // }
-   // }
-}
-
-function OO00O00(OO00O0O) {
-    if (OO00O0O) {
-        document.getElementById("divPlayArea").style.display = "none";
-        document.getElementById("divLicense").style.display = ""
-    } else {
-        document.getElementById("divLicense").style.display = "none";
-        document.getElementById("divPlayArea").style.display = ""
-    }
-}
-var O0O0O00 = "";
-var O0000OO = false;
-var O00O0OO = -1;
-var O00OO00 = -1;
-var accepted = false;
-var O0O0OOO;
-
-function AcceptLicense() {
-    accepted = true;
-    OO00O00(false);
-    submitThis()
-}
-
-function DeclineLicense() {
-    OO00O00(false);
-    accepted = false;
-    reset();
-}
 
 function reset() {
     O0O0O00 = "";
@@ -134,25 +50,6 @@ function reset() {
     document.getElementById("txtpetition").focus()
 }
 
-function O0O00OO() {
-    if (window.XMLHttpRequest) {
-        O0O0OOO = new XMLHttpRequest()
-    } else {
-        if (window.ActiveXObject) {
-            try {
-                O0O0OOO = new ActiveXObject("Msxml2.XMLHTTP")
-            } catch (e) {
-                try {
-                    O0O0OOO = new ActiveXObject("Microsoft.XMLHTTP")
-                } catch (e) {
-                    O0O0OOO = false
-                }
-            }
-        } else {
-            O0O0OOO = false
-        }
-    }
-}
 
 function O00O00O() {
     clearTimeout(OO0000O);
